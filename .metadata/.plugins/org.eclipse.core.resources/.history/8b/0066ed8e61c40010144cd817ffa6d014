@@ -1,0 +1,13 @@
+package com.demo.dao;
+
+import com.demo.beans.Product;
+
+public class ProductDaoImpl implements ProductDao {
+
+	@Override
+	public boolean save(Product p) {
+		
+		return false;
+	}
+
+}

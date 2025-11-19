@@ -1,0 +1,10 @@
+package com.demo.test;
+import com.demo.service.*;
+public class TestProduct {
+
+	public static void main(String[] args) {
+		ProductService pservice = new ProductServiceImpl();
+
+	}
+
+}

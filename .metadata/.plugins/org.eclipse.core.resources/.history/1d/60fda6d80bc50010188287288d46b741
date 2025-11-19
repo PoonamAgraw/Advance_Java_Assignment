@@ -1,0 +1,17 @@
+package com.demo.service;
+
+import java.util.List;
+
+import com.demo.beans.Product;
+
+public interface ProductService {
+
+	boolean addNewProduct();
+
+	List<Product> displayAllProduct();
+
+	Product findById(int id);
+
+	boolean UpdateById(int id, int qty, double price);
+
+}

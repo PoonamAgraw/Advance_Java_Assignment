@@ -1,0 +1,95 @@
+package com.demo.test;
+import com.demo.beans.Product;
+import com.demo.service.*;
+import java.util.*;
+public class TestProduct {
+
+	public static void main(String[] args) {
+		ProductService pservice = new ProductServiceImpl();
+		Scanner sc = new Scanner(System.in);
+		int choice =0;
+		do {System.out.println("---------Menu--------");
+			System.out.println("1.Add Product.");
+			System.out.println("2.Display All Product.");
+			System.out.println("3.Find By ID.");
+			System.out.println("4.Update By ID.");
+			System.out.println("5.Delete By ID.");
+			System.out.println("6.Sort By Price.");
+			System.out.println("7.Exit");
+			System.out.println("Enter your choice:");
+			choice = sc.nextInt();
+			switch(choice) {
+			case 1->{
+				boolean status=pservice.addNewProduct();
+				if(status) {
+					System.out.println("Product Added Successfully.");
+				}
+				else {
+					System.out.println("Product not Added.");
+				}
+			}
+			
+			case 2->{
+				List<Product> p = pservice.displayAllProduct();
+				p.forEach(System.out::println);
+			}
+			
+			
+			case 3->{
+				System.out.println("Enter your id to find:");
+				int id = sc.nextInt();
+				Product p = pservice.findById(id);
+				if(p!=null) {
+					System.out.println(p);
+				}else {
+					System.out.println("Id not found");
+				}
+			}
+			
+			case 4->{
+				System.out.println("Enter your id to find:");
+				int id = sc.nextInt();
+				System.out.println("Enter your qty to update:");
+				int qty = sc.nextInt();
+				System.out.println("Enter your price to update:");
+				double price = sc.nextDouble();
+				boolean status=pservice.updateById(id,qty,price);
+				if(status) {
+					System.out.println("Product Updated Successfully.");
+				}
+				else {
+					System.out.println("Product not Updated.");
+				}
+			}
+			
+			case 5->{
+				System.out.println("Enter your id to find:");
+				int id = sc.nextInt();
+				boolean status=pservice.deleteById(id);
+				if(status) {
+					System.out.println("Product Deleted Successfully.");
+				}
+				else {
+					System.out.println("Product not Deleted.");
+				}
+			}
+			
+			case 6->{
+				List<Product> p = pservice.sortProduct();
+				p.forEach(System.out::println);
+			}
+			case 7->{
+					System.out.println("Thank you for visting.");	
+					sc.close();
+					pservice.closeMyConnetion();
+			}
+			default ->{
+				System.out.println("Wrong Choice.");
+			}
+			}
+			
+		}
+		while(choice!=7);
+	}
+
+}

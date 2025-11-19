@@ -1,0 +1,16 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+
+import com.demo.beans.Product;
+
+public class ProductDaoImpl implements ProductDao {
+	static Connection conn;
+	static PreparedStatement insProd;
+	@Override
+	public boolean save(Product p) {
+		
+		return false;
+	}
+
+}

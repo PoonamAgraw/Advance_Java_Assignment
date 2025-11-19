@@ -1,0 +1,11 @@
+package com.demo.test;
+import com.demo.service.*;
+import java.util.*;
+public class TestProduct {
+
+	public static void main(String[] args) {
+		ProductService pservice = new ProductServiceImpl();
+		Scanner sc = new Scanner(System.in);
+	}
+
+}

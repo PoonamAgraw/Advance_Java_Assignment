@@ -1,0 +1,20 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import com.demo.beans.Product;
+
+public class ProductDaoImpl implements ProductDao {
+	static Connection conn;
+	static PreparedStatement insProd;
+	static {
+		conn=DBUtil.getMyConnection();
+	}
+	@Override
+	public boolean save(Product p) {
+		
+		return false;
+	}
+
+}

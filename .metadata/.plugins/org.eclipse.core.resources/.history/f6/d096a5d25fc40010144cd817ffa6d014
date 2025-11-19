@@ -1,0 +1,17 @@
+package com.demo.service;
+import com.demo.dao.*;
+
+public class ProductServiceImpl implements ProductService {
+    private ProductDao pdao;
+    
+	public ProductServiceImpl() {
+		pdao = new ProductDaoImpl();
+	}
+
+	@Override
+	public boolean addNewProduct() {
+		Scanner sc = new Scanner(System.in);
+		return save(p);
+	}
+
+}

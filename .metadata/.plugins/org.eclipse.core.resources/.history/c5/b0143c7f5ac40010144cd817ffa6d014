@@ -1,0 +1,10 @@
+import java.sql.DriverManager;
+
+public class TestPrepareStatement {
+
+	public static void main(String[] args) {
+		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver()));
+
+	}
+
+}
