@@ -4,6 +4,6 @@ import com.demo.beans.MyUser;
 
 public interface LoginService {
 
-	MyUser validateUser(String uname, String password);
+	MyUser validateuser(String uname, String pass);
 
 }

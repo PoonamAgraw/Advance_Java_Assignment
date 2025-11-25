@@ -19,7 +19,7 @@ public class ProductDaoImpl implements ProductDao{
 			selproduct=conn.prepareStatement("select * from productss");
 			insproduct = conn.prepareStatement("insert into productss values(?,?,?,?,?,?)");
 			selById=conn.prepareStatement("select * from productss where pid=?");
-			updateById=conn.prepareStatement("update productss set pname=?,qty=?,price=?,expire_date=?,cid=? where pid=?");
+			updateById=conn.prepareStatement("update productss set pname=?,qty=?,price=?,expdate=?,cid=? where pid=?");
 			deleteById=conn.prepareStatement("delete from productss where pid=?");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -51,7 +51,7 @@ public class ProductDaoImpl implements ProductDao{
 			insproduct.setString(2, p.getPname());
 			insproduct.setInt(3, p.getQty());
 			insproduct.setDouble(4, p.getPrice());
-			insproduct.setDate(5, java.sql.Date.valueOf(p.getexpire_date()));
+			insproduct.setDate(5, java.sql.Date.valueOf(p.getexpdate()));
 			insproduct.setInt(6, p.getCid());
 			int n = insproduct.executeUpdate();
 			return n>0;
@@ -85,7 +85,7 @@ public class ProductDaoImpl implements ProductDao{
 			updateById.setString(1, p.getPname());
 			updateById.setInt(2, p.getQty());
 			updateById.setDouble(3, p.getPrice());
-			updateById.setDate(4, java.sql.Date.valueOf(p.getexpire_date()));
+			updateById.setDate(4, java.sql.Date.valueOf(p.getexpdate()));
 			updateById.setInt(5, p.getCid());
 			updateById.setInt(6, p.getPid());
 			int n = updateById.executeUpdate();

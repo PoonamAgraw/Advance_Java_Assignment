@@ -20,9 +20,9 @@ public class ShowProduct extends HttpServlet{
 		PrintWriter out=response.getWriter();
 		ProductService pservice=new ProductServiceImpl();
 		List<Product> plist=pservice.getAllProducts();
-		out.println("<table border='2'><tr><th>Id</th><th>Name</th><th>qty</th><th>price</th><th>expire_date</th><th>cid</th><th>action</th></tr>");
+		out.println("<table border='2'><tr><th>Id</th><th>Name</th><th>qty</th><th>price</th><th>expdate</th><th>cid</th><th>action</th></tr>");
 		for(Product p:plist) {
-			out.println("<tr><td>"+p.getPid()+"</td><td>"+p.getPname()+"</td><td>"+p.getQty()+"</td><td>"+p.getPrice()+"</td><td>"+p.getexpire_date()+"</td><td>"+p.getCid()+"</td>");
+			out.println("<tr><td>"+p.getPid()+"</td><td>"+p.getPname()+"</td><td>"+p.getQty()+"</td><td>"+p.getPrice()+"</td><td>"+p.getexpdate()+"</td><td>"+p.getCid()+"</td>");
 			out.println("<td><a href='deleteproduct?pid="+p.getPid()+"'>delete</a>/<a href='editproduct?pid="+p.getPid()+"'>edit</a></td></tr>");
 		}
 		out.println("</table>");

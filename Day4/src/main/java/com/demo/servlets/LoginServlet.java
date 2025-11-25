@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet{
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		String uname=request.getParameter("uname");
-		String pass=request.getParameter("password");
+		String pass=request.getParameter("pass");
 		LoginService lservice=new LoginServiceImpl();
 		MyUser user=lservice.validateUSer(uname,pass);
 		if(user!=null) {

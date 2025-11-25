@@ -4,6 +4,6 @@ import com.demo.bean.MyUser;
 
 public interface LoginDao {
 
-	MyUser checkUser(String uname, String password);
+	MyUser checkUser(String uname, String pass);
 
 }

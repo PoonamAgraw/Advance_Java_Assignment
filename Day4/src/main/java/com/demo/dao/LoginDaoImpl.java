@@ -14,7 +14,7 @@ public class LoginDaoImpl implements LoginDao{
     	 
     	 try {
     		 conn=DBUtil.getMyConnection();
-			seluser=conn.prepareStatement("select uname,email,role from user where uname=? and password=?");
+			seluser=conn.prepareStatement("select uname,email,role from user where uname=? and pass=?");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -22,10 +22,10 @@ public class LoginDaoImpl implements LoginDao{
     	 
      }
 	@Override
-	public MyUser checkUser(String uname, String password) {
+	public MyUser checkUser(String uname, String pass) {
 		try {
 			seluser.setString(1, uname);
-			seluser.setString(2, password);
+			seluser.setString(2, pass);
 			ResultSet rs=seluser.executeQuery();
 			if(rs.next()) {
 				MyUser user=new MyUser(rs.getString(1),rs.getString(2),rs.getString(3));

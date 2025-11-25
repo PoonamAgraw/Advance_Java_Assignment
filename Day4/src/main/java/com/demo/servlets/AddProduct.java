@@ -20,7 +20,7 @@ public class AddProduct extends HttpServlet{
 		String pname = req.getParameter("pname");
 		int qty = Integer.parseInt(req.getParameter("qty"));
 		double price = Double.parseDouble(req.getParameter("price"));
-		String dt = req.getParameter("expire_date");
+		String dt = req.getParameter("expdate");
 		LocalDate ldt = LocalDate.parse(dt,DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 		int cid = Integer.parseInt(req.getParameter("cid"));
 		Product p = new Product(pid,pname,qty,price,ldt,cid);

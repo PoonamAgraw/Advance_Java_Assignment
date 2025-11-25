@@ -5,20 +5,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
+
 import com.demo.beans.MyUser;
 
-public class LoginDaoImpl implements LoginDao {
+public class LoginDaoImpl implements LoginDao{
 	static Connection conn;
 	static {
 		conn=DBUtil.getMyConnection();
 		
 	}
 	@Override
-	public MyUser checkUser(String uname, String password) {
+	public MyUser checkUser(String uname, String pass) {
 		try {
-			PreparedStatement seluser=conn.prepareStatement("select uname,email,role from user where uname=? and password=? ");
+			PreparedStatement seluser=conn.prepareStatement("select uname,email,role from user where uname=? and pass=? ");
 			seluser.setString(1, uname);
-			seluser.setString(2, password);
+			seluser.setString(2, pass);
 			ResultSet rs=seluser.executeQuery();
 			if(rs.next())
 			{

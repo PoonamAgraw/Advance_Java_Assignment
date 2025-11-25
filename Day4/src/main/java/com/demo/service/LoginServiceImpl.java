@@ -12,7 +12,7 @@ public class LoginServiceImpl implements LoginService{
   }
 
 @Override
-public MyUser validateUSer(String uname, String password) {
-	return ldao.checkUser(uname,password);
+public MyUser validateUSer(String uname, String pass) {
+	return ldao.checkUser(uname,pass);
 }
 }

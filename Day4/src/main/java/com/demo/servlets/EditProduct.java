@@ -25,8 +25,8 @@ public class EditProduct extends HttpServlet{
 		out.println("Product pname :<input type = 'text'name = 'pname' id ='pname' value='"+p.getPname()+"'><br/>");
 		out.println("Product qty :<input type = 'text' name = 'qty' id ='qty' value='"+p.getQty()+"'><br/>");
 		out.println("Product price :<input type = 'text' name = 'price' id ='price' value='"+p.getPrice()+"'><br/>");
-		String sdt=p.getexpire_date().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-		out.println("Product expdate :<input type = 'text' name = 'expire_date' id ='expire_date' value='"+sdt+"'><br/>");
+		String sdt=p.getexpdate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+		out.println("Product expdate :<input type = 'text' name = 'expdate' id ='expdate' value='"+sdt+"'><br/>");
 		out.println(" Product cid :<input type = 'text' name = 'cid' id ='cid' value='"+p.getCid()+"'><br/>");
 		out.println("<button type='submit' name ='update' id='update'>Update product</button>");
 		out.println(" </form>");

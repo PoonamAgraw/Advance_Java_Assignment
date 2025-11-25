@@ -7,18 +7,18 @@ public class Product {
    private String pname;
    private int qty;
    private double price;
-   private LocalDate expire_date;
+   private LocalDate expdate;
    private int cid;
 public Product() {
 	super();
 }
-public Product(int pid, String pname, int qty, double price, LocalDate expire_date, int cid) {
+public Product(int pid, String pname, int qty, double price, LocalDate expdate, int cid) {
 	super();
 	this.pid = pid;
 	this.pname = pname;
 	this.qty = qty;
 	this.price = price;
-	this.expire_date = expire_date;
+	this.expdate = expdate;
 	this.cid = cid;
 }
 public int getPid() {
@@ -45,11 +45,11 @@ public double getPrice() {
 public void setPrice(double price) {
 	this.price = price;
 }
-public LocalDate getexpire_date() {
-	return expire_date;
+public LocalDate getexpdate() {
+	return expdate;
 }
-public void setexpire_date(LocalDate expire_date) {
-	this.expire_date = expire_date;
+public void setexpdate(LocalDate expdate) {
+	this.expdate = expdate;
 }
 public int getCid() {
 	return cid;
@@ -59,7 +59,7 @@ public void setCid(int cid) {
 }
 @Override
 public String toString() {
-	return "Product [pid=" + pid + ", pname=" + pname + ", qty=" + qty + ", price=" + price + ", expire_date=" + expire_date
+	return "Product [pid=" + pid + ", pname=" + pname + ", qty=" + qty + ", price=" + price + ", expdate=" + expdate
 			+ ", cid=" + cid + "]";
 }
    
