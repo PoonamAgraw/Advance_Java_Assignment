@@ -12,7 +12,7 @@
   </servlet>
   <servlet-mapping>
    <servlet-name>login</servlet-name>
-   <url-pattern>/validateuser</url-pattern>
+   <url-pattern>/validateUSer</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -21,7 +21,7 @@
   </servlet>
   <servlet-mapping>
    <servlet-name>show</servlet-name>
-   <url-pattern>/showproduct</url-pattern>
+   <url-pattern>/ShowProduct</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -30,7 +30,7 @@
   </servlet>
   <servlet-mapping>
    <servlet-name>add</servlet-name>
-   <url-pattern>/addproduct</url-pattern>
+   <url-pattern>/AddProduct</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -39,7 +39,7 @@
   </servlet>
   <servlet-mapping>
    <servlet-name>edit</servlet-name>
-   <url-pattern>/editproduct</url-pattern>
+   <url-pattern>/EditProduct</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -48,7 +48,7 @@
   </servlet>
   <servlet-mapping>
    <servlet-name>update</servlet-name>
-   <url-pattern>/updateproduct</url-pattern>
+   <url-pattern>/UpdateProduct</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -57,7 +57,7 @@
   </servlet>
   <servlet-mapping>
    <servlet-name>delete</servlet-name>
-   <url-pattern>/deleteproduct</url-pattern>
+   <url-pattern>/DeleteProduct</url-pattern>
   </servlet-mapping>
   
   

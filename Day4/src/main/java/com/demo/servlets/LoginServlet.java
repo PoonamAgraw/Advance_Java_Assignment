@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet{
 		String uname=request.getParameter("uname");
 		String pass=request.getParameter("pass");
 		LoginService lservice=new LoginServiceImpl();
-		MyUser user=lservice.validateUSer(uname,pass);
+		MyUser user=lservice.validateUser(uname,pass);
 		if(user!=null) {
 			RequestDispatcher rd=request.getRequestDispatcher("showproduct");
 			rd.forward(request, response);
@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet{
 			rd.include(request, response);
 			
 		}
+		
 		
 	}
 
