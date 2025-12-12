@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.beans.Product;
 import com.demo.dto.ProductDto;
 import com.demo.service.ProductService;
 
