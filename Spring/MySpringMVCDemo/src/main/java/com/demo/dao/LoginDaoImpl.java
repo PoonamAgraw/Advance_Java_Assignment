@@ -11,10 +11,10 @@ import com.demo.beans.MyUSer;
 public class LoginDaoImpl implements LoginDao{
 	 @Autowired
 		JdbcTemplate jdbcTemplate;
-	public MyUSer autheticateUser(String uname, String passwd) {
+	public MyUSer autheticateUser(String uname, String pass) {
 		try {
-			MyUSer u1=jdbcTemplate.queryForObject("select * from myuser where uname=? and passwd=?",
-					new Object[] {uname,passwd},BeanPropertyRowMapper.newInstance(MyUSer.class));
+			MyUSer u1=jdbcTemplate.queryForObject("select * from user where uname=? and pass=?",
+					new Object[] {uname,pass},BeanPropertyRowMapper.newInstance(MyUSer.class));
 			System.out.println(u1);
 			return u1;
 			}catch(EmptyResultDataAccessException e) {

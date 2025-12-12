@@ -12,9 +12,9 @@ public class LoginServiceImpl implements LoginService{
       LoginDao ldao;
 	  
 	@Override
-	public MyUSer validateUser(String uname, String passwd) {
+	public MyUSer validateUser(String uname, String pass) {
 		// TODO Auto-generated method stub
-		return ldao.autheticateUser(uname,passwd);
+		return ldao.autheticateUser(uname,pass);
 	}
 
 }

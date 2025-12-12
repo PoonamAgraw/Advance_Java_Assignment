@@ -27,7 +27,7 @@ public class ProductController {
 	@GetMapping("/showproduct")
 	public ModelAndView getAllProducts(HttpSession session) {
 		MyUSer user=(MyUSer)session.getAttribute("user");
-		if(user!=null && user.getRole().equals("HR")) {
+		if(user!=null && user.getRole().equals("user")) {
 			List<Product> plist=pservice.getAllProducts();
 			return new ModelAndView("showproduct","plist",plist);
 		}else {
